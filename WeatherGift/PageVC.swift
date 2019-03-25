@@ -27,7 +27,7 @@ class PageVC: UIPageViewController {
         dataSource=self
         
         var newLocation = WeatherLocation()
-        newLocation.name = "User Weather Location"
+        newLocation.name = ""
         locationsArray.append(newLocation)
         
         setViewControllers([createDetailVC(forPage: 0)], direction: .forward, animated: false, completion: nil)
@@ -50,8 +50,10 @@ class PageVC: UIPageViewController {
             
         pageControl.pageIndicatorTintColor=UIColor.lightGray
         pageControl.currentPageIndicatorTintColor = UIColor.blue
+        pageControl.backgroundColor = UIColor.white
         pageControl.numberOfPages = locationsArray.count
         pageControl.currentPage = currentPage
+        pageControl.addTarget(self, action: #selector(pageControlPressed), for: .touchUpInside)
         view.addSubview(pageControl)
     }
     
@@ -70,6 +72,8 @@ class PageVC: UIPageViewController {
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let currentViewController = self.viewControllers?[0] as? DetailVC else {return}
+        locationsArray = currentViewController.locationsArray
         if segue.identifier == "ToListVC"{
             let destination = segue.destination as! ListVC
             destination.locationsArray = locationsArray
@@ -120,5 +124,13 @@ extension PageVC: UIPageViewControllerDataSource, UIPageViewControllerDelegate{
             pageControl.currentPage = currentViewController.currentPage
         }
     }
-    
+    @objc func pageControlPressed(){
+        guard let currentViewController = self.viewControllers?[0] as? DetailVC else {return}
+        currentPage = currentViewController.currentPage
+        if pageControl.currentPage < currentPage{
+            setViewControllers([createDetailVC(forPage: pageControl.currentPage)], direction: .reverse, animated: true, completion: nil)
+        }else if pageControl.currentPage > currentPage {
+            setViewControllers([createDetailVC(forPage: pageControl.currentPage)], direction: .forward, animated: true, completion: nil)
+        }
+    }
 }

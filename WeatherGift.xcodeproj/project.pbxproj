@@ -18,6 +18,7 @@
 		A50B0BD822369CBE0079193D /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50B0BD722369CBE0079193D /* DetailVC.swift */; };
 		A50B0BDA2236A2160079193D /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50B0BD92236A2160079193D /* ListVC.swift */; };
 		A50B0BDC2236AB130079193D /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50B0BDB2236AB130079193D /* PageVC.swift */; };
+		A594F270224950C00011B201 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A594F26F224950C00011B201 /* Constants.swift */; };
 		A5AC503722489D5900F3793F /* WeatherLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC503622489D5900F3793F /* WeatherLocation.swift */; };
 		F145C6611CAF0B2F687C6BD9 /* Pods_WeatherGiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBAEB8811EC08767A880C12 /* Pods_WeatherGiftTests.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		A50B0BD722369CBE0079193D /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		A50B0BD92236A2160079193D /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		A50B0BDB2236AB130079193D /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
+		A594F26F224950C00011B201 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A5AC503622489D5900F3793F /* WeatherLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherLocation.swift; sourceTree = "<group>"; };
 		B9153034F8AF11452714F6F3 /* Pods-WeatherGift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherGift.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherGift/Pods-WeatherGift.release.xcconfig"; sourceTree = "<group>"; };
 		CD06D84CA49B96E6F9927C7F /* Pods_WeatherGiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherGiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +149,7 @@
 				A5AC503622489D5900F3793F /* WeatherLocation.swift */,
 				A50B0BDB2236AB130079193D /* PageVC.swift */,
 				A50B0BD722369CBE0079193D /* DetailVC.swift */,
+				A594F26F224950C00011B201 /* Constants.swift */,
 				A50B0BD92236A2160079193D /* ListVC.swift */,
 				A50B0BAB22369BD30079193D /* Main.storyboard */,
 				A50B0BAE22369BD50079193D /* Assets.xcassets */,
@@ -430,6 +433,7 @@
 				A50B0BDC2236AB130079193D /* PageVC.swift in Sources */,
 				A50B0BA822369BD30079193D /* AppDelegate.swift in Sources */,
 				A50B0BD822369CBE0079193D /* DetailVC.swift in Sources */,
+				A594F270224950C00011B201 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
